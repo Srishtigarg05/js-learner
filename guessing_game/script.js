@@ -5,9 +5,17 @@ let randomNumber = Math.floor(Math.random() * 100) + 1;
 let turns = 0;
 
 // Function to handle the game logic
+function set(){
+    let randomNumber = Math.floor(Math.random() * 100) + 1;
+    turns=0;
+    document.getElementById("result").innerText = "";
+    document.getElementById("guessInput").value = "";
+playGame();
+
+}
 function playGame() {
     // Fetch the user input and result display element
-    const guessInput = parseInt(document.getElementById("guessInput").value);
+    const guessInput = parseInt(document.getElementById("guessInput").value);//parseint converting the sting into number
     const result = document.getElementById("result");
 
     // Check if input is valid
@@ -25,7 +33,7 @@ function playGame() {
     } else if (guessInput > randomNumber + 10) {
         result.innerText = "Too high! Try again.";
     } else if (guessInput === randomNumber) {
-        result.innerText = `Congratulations! You guessed it in ${turns} turns.`;
+        result.innerText = ` 🎉 Congratulations! You guessed it in ${turns} turns.`;
         return; // End the game
     } else {
         result.innerText = "You're very close!";
@@ -33,9 +41,11 @@ function playGame() {
 
     // Check if turns exceeded the limit
     if (turns >= 10) {
-        result.innerText = `Game Over! The correct number was ${randomNumber}.`;
+        result.innerText = `💔 Game Over! The correct number was ${randomNumber}.`;
+       
     }
 }
+
 
 // Attach event listener to the button
 document.getElementById("submitGuess").addEventListener("click", playGame);
