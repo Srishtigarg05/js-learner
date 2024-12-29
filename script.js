@@ -6,7 +6,7 @@ let turns = 0;
 
 // Function to handle the game logic
 function set(){
-    let randomNumber = Math.floor(Math.random() * 100) + 1;
+     randomNumber = Math.floor(Math.random() * 100) + 1;
     turns=0;
     document.getElementById("result").innerText = "";
     document.getElementById("guessInput").value = "";
