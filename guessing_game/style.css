@@ -1,0 +1,29 @@
+*{
+    margin: 0px;
+    padding: 0px;
+   text-align: center;
+  
+}
+h1{
+    margin: 20px;
+}
+#guessInput{
+    width: 200px;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+h3{
+    margin: 20px;
+    border: 1px solid black;
+    padding: 15px;
+}
+.guess{
+    margin: 20px;
+    
+}
+button{
+    margin-left: 20px;
+    padding: 10px;
+    font-size: .8rem;
+    font-weight: bolder;
+}
