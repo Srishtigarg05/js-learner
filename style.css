@@ -1,29 +1,153 @@
-*{
-    margin: 0px;
-    padding: 0px;
-   text-align: center;
-  
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
-h1{
-    margin: 20px;
+
+.container {
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    padding: 20px 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    transition: all 0.3s ease-in-out;
 }
-#guessInput{
-    width: 200px;
-    padding: 5px;
-    margin-bottom: 5px;
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
 }
-h3{
-    margin: 20px;
-    border: 1px solid black;
-    padding: 15px;
-}
-.guess{
-    margin: 20px;
-    
-}
-button{
-    margin-left: 20px;
+
+input[type="text"] {
+    width: calc(100% - 22px);
     padding: 10px;
-    font-size: .8rem;
-    font-weight: bolder;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 1rem;
 }
+
+input[type="text"]::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: #28a745;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background: #218838;
+    transform: scale(1.02);
+}
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.filters button {
+    width: 30%;
+    background: #007bff;
+    font-size: 0.9rem;
+    padding: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.filters button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: white;
+    margin-bottom: 10px;
+    padding: 15px 10px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    animation: fadeIn 0.3s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+li:hover {
+    background: #f1f1f1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+li.done {
+    text-decoration: line-through;
+    color: #6c757d;
+    background: #f0f0f0;
+    font-style: italic;
+    opacity: 0.7;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+li button {
+    background-color: white;
+    border: none;
+    color: white;
+    border-radius: 3px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+li button:hover {
+    background: gainsboro;
+    transform: translateY(-2px);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+    }
+}
+
+

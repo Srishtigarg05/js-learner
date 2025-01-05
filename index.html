@@ -3,21 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guessing game</title>
+    <title>To-Do-List</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Number Guessing Game</h1>
-    <h3>Select a random number between 1 and 100. See 
-        if you can guess it in 10 turns or fewer. 
-        We'll tell you if your guess was too high or too low.
-    </h3>
-    <div class="guess"> <label>Enter a guess:</label>
-        <input type="number" id="guessInput" min="1" max="100">
-    </div><br> <button id="submitGuess">Submit guess</button>
-    <button id="retryGuess" onclick="set()">Retry</button>
-    <p id="result"></p>
-<script src="script.js"></script>
+    <div class="container">
+        <h1>To-Do-List</h1>
+        <input type="text" id="new-task" placeholder="Add a new task">
+        <button onclick="addTask()">Add Task</button>
+        <div class="filters">
+            <button onclick="filterTasks('all')">All</button>
+            <button onclick="filterTasks('done')">Done</button>
+            <button onclick="filterTasks('pending')">Pending</button>
+        </div>
+        <ul id="tasks"></ul>
+    </div>
    
+    
+    <script src="script.js"></script>
 </body>
 </html>
